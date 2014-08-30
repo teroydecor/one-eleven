@@ -1,10 +1,93 @@
+body {
+	color: #ededed;
+	background-color: #000;
+}
+
 .container-fluid {
 	max-width: 1048px;
+
+	margin-top: 20px;
+	margin-bottom: 0;
 }
 
+h1 {
+		font-family: 'Bevan', cursive;
+	color: #b04600;
+	text-shadow: #f8e9b9 0 -1px 1px;
+}
+
+h2 {
+font-family: 'Coda', cursive;	color: #b9fba5;
+}
+
+.fader {
+	margin: 50px auto;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-	background-color: #242424;
-	color: #ededed;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+  background-color: #b04600;
+	color: #fff;
+	padding-top: 20px;
+	opacity: 1;
 }
 
+/* My Comment */
 
+/* Large desktops and laptops */
+
+@media (min-width: 1200px) {
+
+.v_big_01 {
+	font-size: 11em;
+}
+
+}
+
+/* Portrait tablets and medium desktops */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+.v_big_01 {
+	font-size: 10em;
+	color: #b01e6f;
+}
+
+}
+
+/* Portrait tablets and small desktops */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+.v_big_01 {
+	font-size: 8em;
+	color: #00ab9b;
+}
+
+}
+
+/* Landscape phones and portrait tablets */
+
+@media (max-width: 767px) {
+
+.v_big_01 {
+	font-size: 5em;
+	color: #00aa46;
+	
+}
+
+}
