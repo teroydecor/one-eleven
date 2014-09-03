@@ -25,109 +25,61 @@
 
 
 
-
+<div id="banner">
+  <div class="wrap-center">
+    <div class="banner-centered" id="banner-text">
+      <h2>Hello <strong>LARGE HEADER TEXT</strong>, WITH A FADE. :-)</h2>
+    </div>
+  </div>
+</div>
 
 
   <div class="container-fluid">
-
-  <div class="row">
-
-  <div class="col-md-12">
-
-
-    <div class="fader">
-      <h1 class="v_big_01">teroydecor</h1>
-    </div>
-
-    <hr>
-
-    <div class="fader">
-      <h2 class="v_big_02">Part of art is knowing when … to change your medium</h2>
-    </div>
-
-    <hr>
-
-    <h3>Two eleven</h3>
-    <hr>
-    <p>TO DO:</p>
-    <p>Sticky footer</p>
-    <p>Pop up advert</p>
-    <p>Slide tab</p>
-    <p>Fade font on slide down</p>
-    <hr>
-      
-   <div class="fader">
-    <h2 class="v_big_02">Good Artists Copy; Great Artists Steal</h2>
-  </div>
-
-    <hr>
-    <h3>Two eleven</h3>
-    <hr>
-    <p>TO DO:</p>
-    <p>Sticky footer</p>
-    <p>Pop up advert</p>
-    <p>Slide tab</p>
-    <p>Fade font on slide down</p>
-    <hr>
-        <hr>
-
-         <div class="fader">
-    <h2 class="v_big_02">I want to make good art -  even if nobody cares</h2>
-  </div>
-
-
-    <hr>
-    <h3>Two eleven</h3>
-    <hr>
-    <p>TO DO:</p>
-    <p>Sticky footer</p>
-    <p>Pop up advert</p>
-    <p>Slide tab</p>
-    <p>Fade font on slide down</p>
-    <hr>
-        <hr>
-
-
-
-         <div class="fader">
-    <h2 class="v_big_02">FUCK ART, LET'S DANCE!</h2>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="video-container">
-  <iframe height="315" width="560" allowfullscreen=""  src="//www.youtube-nocookie.com/embed/ytIfSuy_mOA?rel=0" frameborder="0" ></iframe>
-</div>
-
-<div class="container-fluid">
-    <h3>Two eleven</h3>
-    <hr>
-    <p>TO DO:</p>
-    <p>Sticky footer</p>
-    <p>Pop up advert</p>
-    <p>Slide tab</p>
-    <p>Fade font on slide down</p>
-    <hr>
+    <div class="row">
       
 
-
-    </div>
-
-
-
-
-
-<div class="footer">
-      <div class="container">
-        <p class="text-muted">.</p>
-      </div>
-    </div>
-
-
-
-
+      <section class="color content-header">
+          <div class="fader">
+            <h1 class="v_big_01">This the class .fader</h1>
+            <h2 class="v_big_02">Part of art is knowing when … to change your medium</h2>
+          </div>
+      </section>
     
+      
+      <section class="ss-style-triangles">
+        <div class="fader">
+          <h2>Objectively innovate empowered manufactured products</h2>
+        </div>  
+          <p class="lead">Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors</p>
+      </section>
+
+
+      <section class="color">
+          <div class="fader">
+            <h2>Engage worldwide methodologies </h2>
+          </div>
+            <p class="lead">Galaxies a still more glorious dawn awaits shores of the cosmic ocean bits of moving fluff the only home we've ever known finite but unbounded colonies astonishment laws of physics a very small stage in a vast cosmic arena brain is the seed of intelligence realm of the galaxies Apollonius of Perga rogue intelligent beings courage of our questions made in the interiors of collapsing stars laws of physics how far away, rings of Uranus the carbon in our apple pies rings of Uranus a very small stage in a vast cosmic arena brain is the seed of intelligence preserve and cherish that pale blue dot muse about, globular star cluster ship of the imagination shores of the cosmic ocean, as a patch of light? Ship of the imagination, with pretty stories for which there's little good evidence across the centuries, brain is the seed of intelligence muse about, Vangelis hydrogen atoms?</p>
+      </section>
+
+
+      <section class="ss-style-doublediagonal">
+         <h2>Fin</h2>
+      </section>
+
+      
+    </div><!-- close .row -->
+  </div><!-- close .container-fluid -->
+
+
+    <div class="footer">
+      <div class="container">
+        <p class="text-muted">Just a container-fluid, now row, no column.</p>
+      </div>
+    </div><!-- close .footer -->
+
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -140,12 +92,46 @@
               if (($(this).offset().top - $(window).scrollTop()) < 20) {
                   $(this).stop().fadeTo(100, 0);
               } else {
-                  $(this).stop().fadeTo('slow', 5);
+                  $(this).stop().fadeTo('slow', 2);
               }
           });
       });
     </script>
 
+
+    <script>
+function parallaxScroll() {
+  scrollPos = $(this).scrollTop();
+  $('.header-parallax').css({
+    'background-position' : '50% ' + (-scrollPos/4)+"px"
+  });
+  $('.header-content > div').css({
+    'opacity': 1 - (scrollPos / 250)
+  });
+}
+$(document).ready(function(){
+  $(window).scroll(function() {
+    parallaxScroll();
+  });
+});
+</script>
+
+
+<script>
+function scrollBanner() {
+$(document).scroll(function(){
+var scrollPos = $(this).scrollTop();
+$('#banner-text').css({
+'top' : (scrollPos/3)+'px',
+'opacity' : 1-(scrollPos/510)
+});
+$('#banner').css({
+'background-position' : 'center ' + (-scrollPos/2)+'px'
+});
+});
+}
+scrollBanner();
+</script>
 
   </body>
 </html>
