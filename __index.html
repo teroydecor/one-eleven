@@ -28,7 +28,7 @@
 <div id="banner">
   <div class="wrap-center">
     <div class="banner-centered" id="banner-text">
-      <h2>Hello00 <strong>LARGE HEADER TEXT</strong>, WITH A FADE. :-)</h2>
+      <h2>Hello <strong>LARGE HEADER TEXT</strong>, WITH A FADE. :-)</h2>
     </div>
   </div>
 </div>
@@ -95,6 +95,24 @@
                   $(this).stop().fadeTo('slow', 2);
               }
           });
+      });
+    </script>
+
+
+    <script>
+      function parallaxScroll() {
+        scrollPos = $(this).scrollTop();
+        $('.header-parallax').css({
+          'background-position' : '50% ' + (-scrollPos/4)+"px"
+        });
+        $('.header-content > div').css({
+          'opacity': 1 - (scrollPos / 250)
+        });
+      }
+      $(document).ready(function(){
+        $(window).scroll(function() {
+          parallaxScroll();
+        });
       });
     </script>
 

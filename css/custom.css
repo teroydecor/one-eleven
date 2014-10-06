@@ -107,6 +107,14 @@ section {
 
 .color {
 	background: #3498db url(http://placekitten.com/g/1700/1300) 0 -10px;
+	no-repeat fixed center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path/to/image/1.jpg',sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path/to/image/1.jpg',sizingMethod='scale')";
+	margin-bottom: 0;
 }
 
 /*** Individual section styles and separators ***/
